@@ -4,7 +4,7 @@ describe 'user seesa all articles' do
   describe 'they visit /articles' do
     it 'displays all articles' do
       article_1 = Article.create(title: 'Title Uno', body: 'Body Uno')
-      article_1 = Article.create(title: 'Title Dos', body: 'Body Dos')
+      article_2 = Article.create(title: 'Title Dos', body: 'Body Dos')
 
       visit '/articles'
 
