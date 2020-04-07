@@ -39,6 +39,7 @@ group :development, :test do
   gem 'launchy'
   gem 'launchy'
   gem 'shoulda-matchers'
+  gem 'pry'
 end
 
 group :development do
