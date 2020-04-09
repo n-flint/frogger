@@ -40,4 +40,16 @@ describe 'user sees one article' do
       expect(page).to have_content("I would never euthenize my tigers, that's crazy...")
     end
   end
+
+  describe 'it shows the number of comments' do
+    it 'can see the number of comments' do
+      article = Article.create!(title: "New Title", body: "New Body")
+      comment_1 = article.comments.create(author_name: 'Joe Exotic', body: 'Did I tell you about Carol Baskins?')
+      comment_2 = article.comments.create(author_name: 'Carol Baskins', body: 'Have you seen my husband?')
+
+      visit article_path(article)
+
+      expect(page).to have_content('Comments: (2)')
+    end
+  end
 end
