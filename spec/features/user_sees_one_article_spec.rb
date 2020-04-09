@@ -35,7 +35,7 @@ describe 'user sees one article' do
       click_on "Submit"
 
       expect(current_path).to eq(article_path(article))
-      expect(page).to have_content("Post a Comment")
+      expect(page).to have_content("Post A Comment")
       expect(page).to have_content("Doc Antel")
       expect(page).to have_content("I would never euthenize my tigers, that's crazy...")
     end
