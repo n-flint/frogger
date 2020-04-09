@@ -13,8 +13,6 @@ describe 'user sees one article' do
 
       click_link article_1.title
 
-      save_and_open_page
-
       expect(current_path).to eq(article_path(article_1))
       expect(page).to have_content(article_1.title)
       expect(page).to have_content(article_1.body)
