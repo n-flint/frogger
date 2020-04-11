@@ -6,4 +6,9 @@ class Article < ApplicationRecord
   validates_presence_of :title,
                         :body
 
+  def tag_list
+    tags.map do |t|
+      t.name
+    end.join(', ')
+  end
 end
