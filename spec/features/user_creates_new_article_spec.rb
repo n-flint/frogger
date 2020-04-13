@@ -18,7 +18,7 @@ describe 'user creates a new article' do
 
         expect(page).to have_content('New Title!')
         expect(page).to have_content('New Body, Oh Yeah!')
-        expect(page).to have_content('tigers, polygamy')
+        expect(page).to have_content('tigers polygamy')
         expect(page).to have_content("Article 'New Title!' was Created!")
       end
     end
