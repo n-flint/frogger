@@ -11,4 +11,8 @@ class Article < ApplicationRecord
       t.name
     end.join(', ')
   end
+
+  def tag_list=(tags_string)
+    
+  end
 end
