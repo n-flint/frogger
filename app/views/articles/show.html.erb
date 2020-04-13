@@ -3,7 +3,7 @@
   <p>
     Tags:
     <% @article.tags.each do |t| %>
-      <%= t.name %>
+      <%= link_to t.name, tag_path(t) %>
     <% end %>
   </p>
 <h3>Comments: (<%= @article.comments.size %>)</h3>
