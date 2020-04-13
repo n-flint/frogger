@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20200411000607) do
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
 
+
   create_table "tags", force: :cascade do |t|
     t.string "name"
   end
