@@ -1,10 +1,11 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
-<%= @article.tags.each do |t| %>
   <p>
-    <%= t.name %>
+    Tags:
+    <% @article.tags.each do |t| %>
+      <%= t.name %>
+    <% end %>
   </p>
-<% end %>
 <h3>Comments: (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments.reverse %>
 <%= render partial: 'comments/form'%>
